@@ -33,3 +33,29 @@ console.log(originalArray) // --> [ 1, 2, '3 items are deleted from here', 6, 7,
 // Similarly, you can insert more than one elements in place of the deleted items
 // console.log(originalArray.splice(2, 3, "item 1", "item 2")) // --> [ 3, 4, 5 ]
 // console.log(originalArray) // --> [ 1, 2, 'item 1', 'item 2', 6, 7, 8, 9 ]
+
+// ==============================================================================================================
+
+// Reduce function
+
+// Let's have a sum array element program
+
+let sum = 0
+let arrayToSum = [1, 2, 3, 4, 5]
+for(let i = 0; i < arrayToSum.length; i++) {
+    sum += arrayToSum[i]
+}
+console.log(sum)
+
+
+// Now, using reduce function
+
+const total = arrayToSum.reduce((accumulator, currentValue) => accumulator + currentValue)
+console.log(total)
+
+// Explanation: accumulator holds the sum, and currentValue holds the current iterator value. See the dry run of above program
+
+// a = 1, c = 2 --> a = 3
+// a = 3, c = 3 --> a = 6
+// a = 6, c = 4 --> a = 10
+// a = 10, c = 5 --> a = 15
